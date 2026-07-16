@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Notes App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left-panel">
+
+            <div class="logo">
+                <i class="fa-solid fa-cloud"></i>
+                <h2>AWS Notes</h2>
+            </div>
+
+            <div class="card">
+
+                <h3>Create New Note</h3>
+
+                <input type="text" id="filename" placeholder="Filename (example.txt)">
+
+                <textarea id="content" rows="8" placeholder="Write your note..."></textarea>
+
+                <button onclick="saveNote()">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Note
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+
+            <div class="toolbar">
+
+                <h3>All Notes</h3>
+
+                <button onclick="loadNotes()">
+                    <i class="fa-solid fa-rotate"></i>
+                    Refresh
+                </button>
+
+            </div>
+
+            <div id="notesList" class="notes-list">
+
+            </div>
+
+            <div class="viewer">
+
+                <h3>Selected Note</h3>
+
+                <pre id="noteContent">
+Select any note...
+            </pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
